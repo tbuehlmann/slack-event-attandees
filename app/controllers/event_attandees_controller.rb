@@ -27,7 +27,7 @@ class EventAttandeesController < ApplicationController
   end
 
   def set_event_attandee
-    @event_attandee = current_user.event_attandees.find(params[:id])
+    @event_attandee = current_user.event_attandees.find_by(event: @event, id: params[:id])
   end
 
   def create_event_attandee_params

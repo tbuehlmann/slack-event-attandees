@@ -1,0 +1,2 @@
+var eventAttandeeForm = document.getElementById("event-attandee-form");
+eventAttandeeForm.outerHTML = "<%= escape_javascript(render('form', event_attandee: @event_attandee)) %>";
